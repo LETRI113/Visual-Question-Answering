@@ -37,6 +37,14 @@ A **Linear + Softmax** layer predicts the probability of the next word in the an
 - **Inference:** uses *greedy decoding* to generate answers automatically.
 
 ---
+Dataset: Visual Question Answering – Computer Vision & NLP (Kaggle)
+
+Loss function: CrossEntropy Loss
+
+Optimizer: Adam
+
+Epochs: 30-40 (GPU T4)
+Accuracy: ≈ 58%
 
 ## ⚙️ **Model Training Configuration**
 
