@@ -1,0 +1,31 @@
+# Core libraries
+numpy
+pandas
+matplotlib
+seaborn
+
+# Deep Learning
+torch
+torchvision
+torchaudio
+
+# NLP processing
+spacy
+nltk
+tqdm
+
+# Image processing
+Pillow
+opencv-python
+
+# Utility
+scikit-learn
+scipy
+
+# Jupyter environment
+notebook
+ipykernel
+
+# Optional: For Kaggle / visualization
+kaggle
+plotly
