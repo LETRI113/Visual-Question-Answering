@@ -83,27 +83,35 @@ Apply multimodal fusion layers (e.g., MLP + attention heads)
 Evaluate using BLEU / ROUGE / CIDEr for long-form answers
 
 
-   [ẢNH] ─► CNN (ResNet50) ─► image_feat (512)
-                         │
-                         ▼
-   [CÂU HỎI] ─► LSTM Encoder ─► question_feat (512)
-                         │
-                         ▼
-               Concatenate ─► combined_feat (1024)
-                         │
-                         ▼
-        [Decoder hidden state] ───┐
-                                  │
-                                  ▼
-                         ┌───────────────┐
-                         │ Attention     │
-                         │  (Linear + σ) │
-                         └──────┬────────┘
-                                ▼
-                        context vector (512)
-                                │
-                                ▼
-                      Answer Decoder (LSTM)
-                                │
-                                ▼
-                         Sinh ra câu trả lời
+                                                            [ẢNH] ─► CNN (ResNet50) ─► image_feat (512)
+                                                            
+                                                                                  │
+                                                                                  ▼
+                                                                                  
+                                                            [CÂU HỎI] ─► LSTM Encoder ─► question_feat (512)
+                                                                                  │
+                                                                                  ▼
+                                                                                  
+                                                                        Concatenate ─► combined_feat (1024)
+                                                                                  │
+                                                                                  ▼
+                                                                                  
+                                                                 [Decoder hidden state] ───┐
+                                                                                           │
+                                                                                           ▼
+                                                                                           
+                                                                                  ┌───────────────┐
+                                                                                  │ Attention     │
+                                                                                  │  (Linear + σ) │
+                                                                                  └──────┬────────┘
+                                                                                         ▼
+                                                                                         
+                                                                                 context vector (512)
+                                                                                         │
+                                                                                         ▼
+                                                                                         
+                                                                               Answer Decoder (LSTM)
+                                                                                         │
+                                                                                         ▼
+                                                                                         
+                                                                                  Sinh ra câu trả lời
